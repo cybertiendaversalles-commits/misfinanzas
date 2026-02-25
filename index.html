@@ -1065,8 +1065,9 @@ function confCierre(ingH,gOp,movH) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────
-window.cargarNube().then(() => {
-   renderAll();
+document.addEventListener("DOMContentLoaded", async () => {
+  await window.cargarNube();
+  renderAll();
 });
 
 setTimeout(()=>{
