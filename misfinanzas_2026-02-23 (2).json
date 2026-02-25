@@ -1,0 +1,201 @@
+{
+  "obligaciones": [
+    {
+      "id": "daniela",
+      "nombre": "Daniela",
+      "tipo": "fija",
+      "monto_total": 50000,
+      "fecha": "2026-02-28",
+      "categoria": "deuda_fija"
+    },
+    {
+      "id": "tarjeta-nu",
+      "nombre": "Tarjeta Nu (abuela)",
+      "tipo": "fija",
+      "monto_total": 154000,
+      "fecha": "2026-02-28",
+      "categoria": "deuda_fija"
+    },
+    {
+      "id": "operacion-1",
+      "nombre": "Operación 1",
+      "tipo": "plazo",
+      "monto_total": 1600000,
+      "fecha": "2026-07-31",
+      "categoria": "deuda_plazo"
+    },
+    {
+      "id": "operacion-2",
+      "nombre": "Operación 2",
+      "tipo": "plazo",
+      "monto_total": 264000,
+      "fecha": "2026-07-31",
+      "categoria": "deuda_plazo"
+    },
+    {
+      "id": "operacion-3",
+      "nombre": "Operación 3",
+      "tipo": "plazo",
+      "monto_total": 350000,
+      "fecha": "2026-07-31",
+      "categoria": "deuda_plazo"
+    },
+    {
+      "id": "impresora-abuela",
+      "nombre": "Deuda impresora abuela",
+      "tipo": "largo_plazo",
+      "monto_total": 4000000,
+      "fecha": "2026-10-31",
+      "categoria": "deuda_larga"
+    },
+    {
+      "id": "deuda-abuela",
+      "nombre": "Deuda directa abuela",
+      "tipo": "largo_plazo",
+      "monto_total": 600000,
+      "fecha": "2026-12-31",
+      "categoria": "deuda_larga"
+    },
+    {
+      "id": "ahorro-leidy",
+      "nombre": "Ahorro Leidy",
+      "tipo": "mensual",
+      "monto_total": 100000,
+      "dia_mes": 5,
+      "categoria": "mensual"
+    },
+    {
+      "id": "internet-papeleria",
+      "nombre": "Internet papelería",
+      "tipo": "mensual",
+      "monto_total": 111000,
+      "dia_mes": 11,
+      "categoria": "mensual"
+    },
+    {
+      "id": "arriendo-papeleria",
+      "nombre": "Arriendo papelería",
+      "tipo": "mensual",
+      "monto_total": 763000,
+      "dia_mes": 13,
+      "categoria": "mensual"
+    },
+    {
+      "id": "servicios-casa",
+      "nombre": "Servicios casa",
+      "tipo": "mensual",
+      "monto_total": 193000,
+      "dia_mes": 26,
+      "categoria": "mensual",
+      "variable": true
+    },
+    {
+      "id": "servicios-papeleria",
+      "nombre": "Servicios papelería",
+      "tipo": "mensual",
+      "monto_total": 158000,
+      "dia_mes": 28,
+      "categoria": "mensual",
+      "variable": true
+    },
+    {
+      "id": "pago-don-luis",
+      "nombre": "Pago Don Luis",
+      "tipo": "mensual",
+      "monto_total": 250000,
+      "dia_mes": 30,
+      "categoria": "mensual"
+    },
+    {
+      "id": "camara-comercio",
+      "nombre": "Renovación Cámara de Comercio",
+      "tipo": "anual",
+      "monto_total": 150000,
+      "fecha": "2026-03-15",
+      "categoria": "anual"
+    },
+    {
+      "id": "ica",
+      "nombre": "ICA",
+      "tipo": "anual",
+      "monto_total": 180000,
+      "fecha": "2026-03-30",
+      "categoria": "anual"
+    },
+    {
+      "id": "declaracion-renta",
+      "nombre": "Declaración de Renta",
+      "tipo": "anual",
+      "monto_total": 100000,
+      "fecha": "2026-08-31",
+      "categoria": "anual"
+    }
+  ],
+  "pagos": {},
+  "pagosMensuales": {},
+  "ingresos": [
+    {
+      "fecha": "2026-02-23T21:13:21.415Z",
+      "monto": 59000,
+      "nota": "Ingresos del dia"
+    }
+  ],
+  "historial": [
+    {
+      "fecha": "2026-02-23T21:33:56.241Z",
+      "accion": "Borrado",
+      "obligacion": "Mamá Novaventa",
+      "monto": 65900
+    },
+    {
+      "fecha": "2026-02-23T21:13:21.415Z",
+      "accion": "Ingreso",
+      "obligacion": "Ingresos del dia",
+      "monto": 59000
+    },
+    {
+      "fecha": "2026-02-23T17:20:11.029Z",
+      "accion": "Borrado",
+      "obligacion": "Rodolfo",
+      "monto": 146000
+    },
+    {
+      "fecha": "2026-02-23T17:20:04.815Z",
+      "accion": "Borrado",
+      "obligacion": "Vuelos Koko",
+      "monto": 52000
+    }
+  ],
+  "papelera": [
+    {
+      "id": "mama-novaventa",
+      "nombre": "Mamá Novaventa",
+      "tipo": "fija",
+      "monto_total": 65900,
+      "fecha": "2026-02-27",
+      "categoria": "deuda_fija",
+      "borradoEn": "2026-02-23T21:33:56.241Z"
+    },
+    {
+      "id": "rodolfo",
+      "nombre": "Rodolfo",
+      "tipo": "fija",
+      "monto_total": 146000,
+      "fecha": "2026-02-17",
+      "categoria": "deuda_fija",
+      "borradoEn": "2026-02-23T17:20:11.028Z"
+    },
+    {
+      "id": "vuelos-koko",
+      "nombre": "Vuelos Koko",
+      "tipo": "fija",
+      "monto_total": 52000,
+      "fecha": "2026-02-28",
+      "categoria": "deuda_fija",
+      "borradoEn": "2026-02-23T17:20:04.815Z"
+    }
+  ],
+  "saldoCaja": 59000,
+  "fondoSeguridad": 0,
+  "cierres": []
+}
