@@ -227,17 +227,19 @@ const db = getFirestore(app);
 
 const docRef = doc(db, "misfinanzas", "datos");
 
-window.cargarNube = async function() {
+async function cargarNube() {
   const snap = await getDoc(docRef);
   if (snap.exists()) {
     S = snap.data();
-    renderAll();
   }
-};
+}
 
-window.guardarNube = async function() {
+async function guardarNube() {
   await setDoc(docRef, S);
-};
+}
+
+window.cargarNube = cargarNube;
+window.guardarNube = guardarNube;
 </script>  
 <script>
 // ─── DATOS INICIALES ──────────────────────────────────────
