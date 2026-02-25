@@ -1063,8 +1063,9 @@ function confCierre(ingH,gOp,movH) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────
-cargar();
-renderAll();
+cargarNube().then(() => {
+  renderAll();
+});
 
 setTimeout(()=>{
   if(!window.matchMedia('(display-mode: standalone)').matches)
