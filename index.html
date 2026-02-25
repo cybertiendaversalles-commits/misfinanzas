@@ -212,6 +212,33 @@ html, body { height: 100%; overflow: hidden; background: #f5f6fa; color: #1e1e2e
 <div id="toast"></div>
 <div id="undobar">↩️ Acción deshecha <button onclick="document.getElementById('undobar').classList.remove('show')" style="background:none;border:none;color:#aaa;cursor:pointer;font-size:14px">✕</button></div>
 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCkTVcdkGgt9NKPY9yvD8B_kLCFSs7xDBc",
+  authDomain: "misfinanzas-93d70.firebaseapp.com",
+  projectId: "misfinanzas-93d70"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const docRef = doc(db, "misfinanzas", "datos");
+
+window.cargarNube = async function() {
+  const snap = await getDoc(docRef);
+  if (snap.exists()) {
+    S = snap.data();
+    renderAll();
+  }
+};
+
+window.guardarNube = async function() {
+  await setDoc(docRef, S);
+};
+</script>  
 <script>
 // ─── DATOS INICIALES ──────────────────────────────────────
 const OBS_INIT = [
@@ -258,13 +285,11 @@ let eHoy = '';
 
 // ─── STORAGE ─────────────────────────────────────────────
 function cargar() {
-  try {
-    const d = localStorage.getItem('mf3');
-    if (d) { const p = JSON.parse(d); S = {...S, ...p}; }
-    else S.obligaciones = JSON.parse(JSON.stringify(OBS_INIT));
-  } catch { S.obligaciones = JSON.parse(JSON.stringify(OBS_INIT)); }
+  cargarNube();
 }
-function guardar() { try { localStorage.setItem('mf3', JSON.stringify(S)); } catch {} }
+function guardar() {
+  guardarNube();
+}
 function snap() { return JSON.parse(JSON.stringify(S)); }
 function pushUndo(s) {
   undoStack.unshift(s);
